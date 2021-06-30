@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: myapp
+  namespace: myapp1
   name: myapp-db
 spec:
   replicas: 4
@@ -10,7 +10,7 @@ spec:
       app: myapp-db
   template:
     metadata:
-      namespace: myapp
+      namespace: myapp1
       labels:
         app: myapp-db
     spec:
@@ -24,7 +24,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  namespace: myapp
+  namespace: myapp1
   name: myapp-db
 spec:
   ports:
